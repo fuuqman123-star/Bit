@@ -4,7 +4,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method Not Allowed' });
   }
 
-  const VERCEL_TOKEN = process.env.;
+  const VERCEL_TOKEN = process.env.VERCEL_TOKEN;
   
   if (!VERCEL_TOKEN) {
     return res.status(500).json({ error: 'Vercel API Token belum diatur di Environment Variables.' });
